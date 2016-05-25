@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Codebreaker</title>
+  <link rel="stylesheet" href="/public/styles/bootstrap.css">
+  <link rel="stylesheet" href="/public/styles/style.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/public/js/script.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="row" style="text-align:center;">
+    <h1>Codebreaker Rack App</h1>
+  </div>
+  <div class="row" style="margin-top: 20px">
+
+    <div class="col-md-3" style="width: 300px" align="center">
+      <h3 align="center">C_Rack_Info:</h3>
+      <form class="form-horizontal">
+        <table>
+          <thead>
+          <div class="row" style="margin-left: 2px;font-size:20px ;">
+            <input class="input-large checked_answer" type="text" style="color: darkred" readonly>
+          </div>
+
+          <div class="row" style="margin-left: 2px;font-size:20px ">
+            <input class="input-large user_code" type="text" style="color: #337ab7" readonly>
+          </div>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="padding-top: 20px">
+
+              <div class="btn-group " style="width: 310px">
+                <button class="btn num"><a href="#">1</a></button>
+                <button class="btn num"><a href="#">2</a></button>
+                <button class="btn num"><a href="#">3</a></button>
+                <button class="btn num"><a href="#">4</a></button>
+                <button class="btn num"><a href="#">5</a></button>
+                <button class="btn num"><a href="#">6</a></button>
+              </div>
+
+            </td>
+          </tr>
+            <td>
+              <h3 align="center">Attempt(s) left: <span class="attempt"><%= @game.move_number %></span> </h3>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 5px" align="center">
+              <button class="btn num-hint">press to get hint</button>
+            </td>
+          </tr>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div class="col-md-4" style="margin-left: 30px; margin-bottom: 10px">
+      <h3 align="center">Results:</h3>
+      <textarea class="output_game" rows="3" readonly></textarea>
+    </div>
+
+  </div>
+</div>
+
+<div>
+  <div id="modal_win">
+    <span id="modal_close">X</span>
+
+    <form action="" method="post">
+      <h2 align="center" style="color: green">YOU WIN!</h2>
+
+      <h3 align="center">Do you want to save your score?</h3>
+      <input style="margin-left: 30px" class="input-large user_name" type="text">
+      <button class="btn save" style="width:120px; margin-bottom: 18px">Save</button>
+      <button class="btn try_again" style="width:120px; margin-left: 50px">Try again</button>
+      <button class="btn exit_win" style="width:120px; margin-left: 153px">Close</button>
+      <img style="margin-left: 130px;margin-top: 5px" src="/public/images/harold.png"/>
+
+    </form>
+
+  </div>
+  <div id="overlay"></div>
+</div>
+
+<div>
+  <div id="modal_lose">
+    <span id="modal_close">X</span>
+
+    <form action="" method="post">
+      <h2 align="center" style="color: red"><strong>You lose!</strong></h2>
+
+      <h3 align="center">The secret number is <%= @game.secret_code %></h3>
+      <button class="btn try_again" style="width:120px; margin-left: 50px">Try again</button>
+      <button class="btn exit_lose" style="width:120px; margin-left: 153px">Close</button>
+      <img style="margin-left: 50px; margin-top: 5px" src="/public/images/sad.jpg"/>
+
+    </form>
+
+  </div>
+  <div id="overlay"></div>
+</div>
+
+</body>
+</html>
