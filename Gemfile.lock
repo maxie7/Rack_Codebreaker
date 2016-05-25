@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/maxie7/codebreaker2.git
-  revision: 325dd752b4f3b960d4a9aaee483d40d1d9903be5
+  remote: https://github.com/maxie7/codebreaker2.git
+  revision: afcbeaeb15e869369eb6e99564bc48771db4c511
   specs:
     codebreaker (0.1.0)
 
