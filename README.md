@@ -9,5 +9,9 @@
 
 ## Howto
 
-You need to install codebreaker:
-gem 'codebreaker', git: 'https://github.com/maxie7/codebreaker2.git'
+You need :
+* 1) to install codebreaker:
+* gem 'codebreaker', git: 'https://github.com/maxie7/codebreaker2.git'
+* 2) 'bundle install' and 'rackup'
+
+![Screen](https://raw.githubusercontent.com/maxie7/ScreensWork/master/rackapp/rackapp.png)
