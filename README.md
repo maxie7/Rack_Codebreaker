@@ -5,6 +5,9 @@ You need :
 * gem 'codebreaker', git: 'https://github.com/maxie7/codebreaker2.git'
 * 2) 'bundle install' and 'rackup'
 
+OR:
+* https://warm-springs-82709.herokuapp.com
+
 ![Screen](https://raw.githubusercontent.com/maxie7/ScreensWork/master/rackapp/rackapp.png)
 
 ## Codebreaker
