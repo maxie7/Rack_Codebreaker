@@ -1,0 +1,87 @@
+.btn{
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: #337ab7;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+body{
+    background: url('/public/images/background.jpg');
+}
+h1,h3{
+  color: #0f2066;
+}
+.input-large{
+    text-align: center;
+    height: 50px;
+    font-size: 24px;
+    padding-top: 10px;
+    color: black;
+    margin-top: 10px;
+}
+.num-hint{
+    width:198px;
+}
+.container{
+    background: #57b0ff;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 700px;
+    border-radius: 10px;
+}
+input,textarea {
+    border-radius: 10px;
+}
+textarea{
+    width: 320px;
+    height: 400px;
+    color: #363636;
+    font-size:18px;
+    font-family: Arial;
+    font-size:13pt
+}
+th{
+
+}
+
+#modal_win,#modal_lose {
+    width: 500px;
+    height: 650px;
+    border-radius: 10px;
+    border: 3px #000 solid;
+    background: #fff;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -250px;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+    padding: 20px 10px;
+}
+
+
+#modal_win #modal_close,#modal_lose #modal_close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+#overlay {
+    z-index: 3;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
